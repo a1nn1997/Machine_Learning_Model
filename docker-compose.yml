@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: api1.1
+    ports:
+      - "80:5000"
+    restart: always
+    networks:
+      - webnet
+networks:
+  webnet:
